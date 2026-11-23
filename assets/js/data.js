@@ -2,6 +2,7 @@ export const profile = {
   firstName: "Kaori",
   lastName: "Panzani",
   role: "Communication digitale & création multimédia",
+  statusLine: "open to stage & missions",
   tagline:
     "Assistante en communication digitale et création multimédia pendant mon premier stage chez Konst Creative Studio. Ici, je rassemble ce que j’ai créé, et ce que je crée encore.",
   bio:
@@ -9,6 +10,8 @@ export const profile = {
   email: "prenom.nom@email.com",
   linkedin: "https://www.linkedin.com/in/ton-profil",
   instagram: "https://www.instagram.com/ton.compte",
+  photo: null,
+  skills: ["Photoshop", "Illustrator", "Premiere Pro", "After Effects", "Figma", "Canva", "HTML / CSS"],
 };
 
 export const internship = {

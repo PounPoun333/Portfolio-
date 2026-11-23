@@ -33,6 +33,25 @@ function fillInternship() {
   $("#missions").innerHTML = internship.missions.map((m) => `<li>${m}</li>`).join("");
 }
 
+function placeholderPhoto() {
+  return `<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <rect width="600" height="600" fill="#131318"/>
+  <rect x="24" y="24" width="552" height="552" fill="none" stroke="#00B4FF" stroke-width="2" opacity="0.7"/>
+  <text x="300" y="330" font-family="'DotGothic16',sans-serif" font-size="150" fill="#F4F4F0" text-anchor="middle" opacity="0.85">写真</text>
+  <text x="300" y="420" font-family="'Space Mono',monospace" font-size="22" fill="#00B4FF" text-anchor="middle" letter-spacing="4">photo.jpg</text>
+</svg>`;
+}
+
+function fillExtras() {
+  const frame = $("#photo-frame");
+  if (profile.photo && profile.photo.src) {
+    frame.innerHTML = `<img src="${profile.photo.src}" alt="${profile.photo.alt || ""}" width="600" height="600" loading="lazy">`;
+  } else {
+    frame.innerHTML = placeholderPhoto();
+  }
+  $("#skills").innerHTML = (profile.skills || []).map((s) => `<li>${s}</li>`).join("");
+}
+
 const params = new URLSearchParams(location.search);
 let activeCat = categories.some((c) => c.id === params.get("cat")) ? params.get("cat") : "all";
 
@@ -221,11 +240,11 @@ addEventListener(
 );
 
 const yearText = new Intl.DateTimeFormat("fr-FR", { year: "numeric" }).format(new Date());
-$("#year").textContent = yearText;
 $("#year2").textContent = yearText;
 
 fillProfile();
 fillInternship();
+fillExtras();
 renderFilters();
 renderProjects();
 initReveal();

@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kaori Panzani — Communication digitale &amp; création multimédia</title>
   <meta name="description" content="Portfolio de Kaori Panzani, assistante en communication digitale et création multimédia (stage chez Konst Creative Studio). Réalisations : sites web, affiches, contenus réseaux sociaux.">
-  <meta name="theme-color" content="#F4EFE4">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23D63A1E' stroke-width='10' stroke-linecap='round' pathLength='100' stroke-dasharray='86 14' transform='rotate(-60 32 32)'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0A0A0C">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230A0A0C'/%3E%3Crect x='14' y='14' width='10' height='36' fill='%2300B4FF'/%3E%3Crect x='28' y='14' width='4' height='36' fill='%23F4F4F0'/%3E%3Crect x='36' y='14' width='8' height='36' fill='%2300B4FF'/%3E%3Crect x='48' y='14' width='3' height='36' fill='%23F4F4F0'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Shippori+Mincho+B1:wght@600;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=DotGothic16&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
 
   <header class="site-header">
     <a class="brand" href="#haut" aria-label="Retour en haut de page">
-      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" pathLength="100" stroke-dasharray="86 14" transform="rotate(-60 32 32)"/></svg>
+      <span class="brand-barcode" aria-hidden="true"></span>
       <span data-profile="name">Kaori Panzani</span>
     </a>
     <nav aria-label="Navigation principale">
@@ -29,29 +29,23 @@
 
   <main id="contenu">
     <section class="hero" id="haut" aria-labelledby="hero-title">
-      <p class="hero-vertical" aria-hidden="true">剣道 — portfolio</p>
-      <div class="hero-enso" aria-hidden="true">
-        <svg viewBox="0 0 600 600" focusable="false">
-          <defs>
-            <filter id="hero-rough" x="-20%" y="-20%" width="140%" height="140%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="11" result="noise"/>
-              <feDisplacementMap in="SourceGraphic" in2="noise" scale="16"/>
-            </filter>
-          </defs>
-          <circle class="enso-circle" cx="300" cy="300" r="210" fill="none" stroke="currentColor" stroke-width="30" stroke-linecap="round" pathLength="100" stroke-dasharray="100 100" transform="rotate(-75 300 300)" filter="url(#hero-rough)"/>
-        </svg>
-      </div>
+      <p class="hero-vertical" aria-hidden="true">作品集 — 2026</p>
       <div class="hero-inner">
+        <span class="sticker" aria-hidden="true">PORTFOLIO — 2026</span>
         <h1 class="hero-title" id="hero-title">
           <span class="line" data-profile="firstName">Kaori</span>
-          <span class="line outline" data-profile="lastName">Panzani</span>
+          <span class="line volt" data-profile="lastName">Panzani</span>
         </h1>
-        <p class="hero-role" data-profile="role">Communication digitale &amp; création multimédia</p>
+        <div class="hero-meta">
+          <p>full name: <span data-profile="name">Kaori Panzani</span></p>
+          <p>role: <span data-profile="role">Communication digitale &amp; création multimédia</span></p>
+          <p>status: <span data-profile="statusLine">open to stage &amp; missions</span><span class="cursor" aria-hidden="true"></span></p>
+        </div>
         <p class="hero-tagline" data-profile="tagline"></p>
       </div>
       <div class="hero-foot">
-        <span>Portfolio — <span id="year">2025</span></span>
-        <a class="scroll-hint" href="#apropos">Défiler
+        <span class="barcode" aria-hidden="true"></span>
+        <a class="scroll-hint" href="#apropos">scroll
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v15M6 13l6 6 6-6"/></svg>
         </a>
       </div>
@@ -74,43 +68,52 @@
         <span class="section-jp" aria-hidden="true">略歴</span>
       </div>
       <div class="about-grid">
-        <p class="about-bio" data-profile="bio" data-reveal></p>
-        <div class="internship" data-reveal>
-          <h3>Premier stage — <span data-internship="company">Konst Creative Studio</span></h3>
-          <p class="internship-role"><span data-internship="role"></span> · <span data-internship="period"></span></p>
-          <ul class="missions" id="missions"></ul>
+        <div class="about-left" data-reveal>
+          <div class="photo-frame" id="photo-frame"></div>
+          <h3 class="side-title">Logiciels</h3>
+          <ul class="skills" id="skills"></ul>
+        </div>
+        <div class="about-right" data-reveal>
+          <p class="about-bio" data-profile="bio" data-reveal></p>
+          <div class="internship">
+            <h3>Premier stage — <span data-internship="company">Konst Creative Studio</span></h3>
+            <p class="internship-role"><span data-internship="role"></span> · <span data-internship="period"></span></p>
+            <ul class="missions" id="missions"></ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section works" id="realisations" aria-labelledby="works-title">
-      <div class="section-head" data-reveal>
-        <h2 id="works-title">Réalisations</h2>
-        <span class="section-jp" aria-hidden="true">作品</span>
+    <section class="works" id="realisations" aria-labelledby="works-title">
+      <div class="works-inner">
+        <div class="section-head" data-reveal>
+          <h2 id="works-title">Réalisations</h2>
+          <span class="section-jp" aria-hidden="true">作品</span>
+        </div>
+        <p class="works-count" id="works-count" aria-live="polite"></p>
+        <div class="filters" id="filters" role="group" aria-label="Filtrer les réalisations"></div>
+        <ul class="project-list" id="project-list"></ul>
+        <p class="empty" id="empty-state" hidden>Rien dans cette catégorie pour l’instant, les prochaines réalisations arrivent bientôt (affiches, autres sites…)</p>
       </div>
-      <p class="works-count" id="works-count" aria-live="polite"></p>
-      <div class="filters" id="filters" role="group" aria-label="Filtrer les réalisations"></div>
-      <ul class="project-list" id="project-list"></ul>
-      <p class="empty" id="empty-state" hidden>Rien dans cette catégorie pour l’instant, les prochaines réalisations arrivent bientôt (affiches, autres sites…)</p>
     </section>
 
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="contact-inner">
-        <h2 id="contact-title" data-reveal>Un projet, une opportunité&#8239;?</h2>
+        <h2 id="contact-title" data-reveal>Un projet&#8239;?</h2>
         <p data-reveal>Je recherche un stage, une alternance ou des missions en communication digitale et création multimédia. Écrivez-moi, je réponds vite.</p>
         <a class="contact-mail" data-profile="email" href="mailto:prenom.nom@email.com" data-reveal>prenom.nom@email.com</a>
         <ul class="contact-links" data-reveal>
-          <li><a data-profile="linkedin" href="#" rel="noopener">LinkedIn</a></li>
-          <li><a data-profile="instagram" href="#" rel="noopener">Instagram</a></li>
+          <li><a data-profile="linkedin" href="#" rel="noopener">LinkedIn ↗</a></li>
+          <li><a data-profile="instagram" href="#" rel="noopener">Instagram ↗</a></li>
         </ul>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year2">2025</span> <span data-profile="name">Kaori Panzani</span></p>
-    <p class="footer-jp" aria-hidden="true">作品集</p>
-    <a href="#haut">Retour en haut</a>
+    <p>© <span id="year2">2026</span> <span data-profile="name">Kaori Panzani</span> — tous droits réservés</p>
+    <span class="barcode barcode-footer" aria-hidden="true"></span>
+    <a href="#haut">Retour en haut ↑</a>
   </footer>
 
   <div class="preview" id="preview" aria-hidden="true"></div>
@@ -127,7 +130,7 @@
         <p class="dialog-summary" id="dialog-summary"></p>
         <p class="dialog-desc" id="dialog-desc"></p>
         <ul class="dialog-tags" id="dialog-tags"></ul>
-        <a class="dialog-link" id="dialog-link" href="#" target="_blank" rel="noopener" hidden>Voir le projet en ligne</a>
+        <a class="dialog-link" id="dialog-link" href="#" target="_blank" rel="noopener" hidden>Voir le projet en ligne ↗</a>
       </div>
     </article>
   </dialog>

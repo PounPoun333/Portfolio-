@@ -39,6 +39,17 @@ Copier un bloc existant dans `projects` et changer les champs :
 },
 ```
 
+### Ajouter ta photo de profil
+
+1. Placer ta photo (carrée de préférence) dans `assets/img/` (ex. `assets/img/photo.jpg`)
+2. Dans `data.js`, remplacer `photo: null` par :
+
+```js
+photo: { src: "assets/img/photo.jpg", alt: "Portrait de Kaori Panzani" },
+```
+
+Sans photo, un placeholder encadré s’affiche à la place.
+
 ### Ajouter une vraie image comme visuel de projet
 
 1. Placer l'image dans `assets/img/` (ex. `assets/img/affiche-festival.jpg`)
@@ -50,9 +61,9 @@ cover: { type: "image", src: "assets/img/affiche-festival.jpg", alt: "Affiche du
 
 ## Changer la direction artistique
 
-- Couleurs : les variables en haut de `assets/css/style.css` (`:root`, ex. `--vermilion`, `--indigo`, `--paper`)
-- Polices : le lien Google Fonts dans `index.html` + les variables `--font-*` dans `style.css`
-- Le nom et le texte du hero, de la section À propos et du contact viennent de `data.js`
+- Couleurs : les variables en haut de `assets/css/style.css` (`:root`) : fond sombre `--bg`, accent bleu électrique `--volt`, section claire `--lavender`, texte `--white`
+- Polices : le lien Google Fonts dans `index.html` + les variables `--font-*` dans `style.css` (titres pixel `Silkscreen`, texte `Space Grotesk`, méta `Space Mono`, accents japonais `DotGothic16`)
+- Le nom, le texte du hero, la section À propos et le contact viennent de `data.js`
 
 ## Déployer sur GitHub Pages
 
